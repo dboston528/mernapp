@@ -144,4 +144,8 @@ router.get('/user/:user_id', async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
+
+// @route   DELETE api/profile
+// @desc    Delete profile, user & post
+// @access  Private
 module.exports = router;
