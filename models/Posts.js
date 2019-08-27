@@ -27,7 +27,7 @@ const PostSchema = new Schema({
   comments: [
     {
       user: {
-        type: Schema.Types.ObjectiD,
+        type: Schema.Types.ObjectId,
         ref: 'users'
       },
       text: {
