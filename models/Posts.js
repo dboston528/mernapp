@@ -16,10 +16,10 @@ const PostSchema = new Schema({
   avatar: {
     type: String
   },
-  likeds: [
+  likes: [
     {
       user: {
-        type: Schema.Types.ObjectiD,
+        type: Schema.Types.ObjectId,
         ref: 'users'
       }
     }
