@@ -3,7 +3,7 @@ const router = express.Router();
 const { check, validationResult } = require('express-validator/check');
 const auth = require('../../middleware/auth');
 
-const Post = require('../../models/Posts');
+const Post = require('../../models/Post');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
@@ -89,10 +89,9 @@ router.delete('/:id', auth, async (req, res) => {
     }
 
     //check user
-    // console.log(post.user);
-    // if (post.user.toString() !== req.user.id) {
-    //   return res.status(401).json({ msg: 'User not authorized' });
-    // }
+    if (post.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: 'User not authorized' });
+    }
 
     await post.remove();
 
