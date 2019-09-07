@@ -104,4 +104,11 @@ router.delete('/:id', auth, async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
+
+// @route   Put api/posts/like/:id
+// @desc    Like a post
+// @access  Private
+
+router.put('/like/:id', auth, async(req, res));
+
 module.exports = router;
