@@ -182,16 +182,18 @@ router.post(
 
     try {
       const user = await User.findById(req.user.id).select('-password');
-
-      const newPost = new Post({
+      const post = await Post.findById(req.params.id);
+      const newComment = {
         text: req.body.text,
         name: user.name,
         avatar: user.avatar,
         user: req.user.id
-      });
+      };
 
-      const post = await newPost.save();
-      res.json(post);
+      post.comments.unshift(newComment);
+
+      await post.save();
+      res.json(post.comments);
     } catch (err) {
       conslole.error(err.message);
       res.status(500).send('Server Error');
