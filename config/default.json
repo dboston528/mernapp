@@ -2,5 +2,7 @@
   "mongoURI": "mongodb+srv://deandre123:deandre123@merndev-spuwf.mongodb.net/test?retryWrites=true&w=majority",
   "jwtSecret": "mysecrettoken",
   "githubClientId": "bd828ee203c8628336bb",
-  "githubSecret": "5e9c3a2593f6fa8b920a44e7e11125568cbf3841"
+  "githubSecret": "5e9c3a2593f6fa8b920a44e7e11125568cbf3841",
+  "instaClientID": "51b17518617e4640bc18e6bec1367db0",
+  "instaSecret": "3983ab05b79b49c2842d8a079d91915d"
 }

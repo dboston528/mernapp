@@ -359,4 +359,29 @@ router.get('/github/:username', (req, res) => {
   }
 });
 
+// @route   GET api/profile/instagram/:username
+// @desc    Get user photos
+// @access  Public
+
+router.get('/instagram', (req, res) => {
+  try {
+    const options = {
+      uri: `https://api.instagram.com/oauth/authorize/?client_id=51b17518617e4640bc18e6bec1367db0&redirect_uri=localhost:5000&response_type=JSON`,
+      method: 'GET',
+      headers: { 'user-agent': 'node.js' }
+    };
+
+    request(options, (error, response, body) => {
+      if (error) console.error(error);
+      if (response.statusCode !== 200) {
+        res.status(404).json({ msg: 'No insta profile found' });
+      }
+      res.json(JSON.parse(body));
+    });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
