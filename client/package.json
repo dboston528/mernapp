@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "eslint-utils": "^1.4.2",
+    "handlebars": "^4.7.3",
     "moment": "^2.24.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -14,7 +15,8 @@
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "serialize-javascript": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
