@@ -16,7 +16,8 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "serialize-javascript": "^2.1.2"
+    "serialize-javascript": "^2.1.2",
+    "uuid": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
