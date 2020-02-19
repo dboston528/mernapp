@@ -9,6 +9,7 @@ const Register = () => {
     password2: ''
   });
 
+  //destructure
   const { name, email, password, password2 } = formData;
   const onchange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -44,7 +45,7 @@ const Register = () => {
       <p className="lead">
         <i className="fas fa-user"></i> Create Your Account
       </p>
-      <form className="form" action="create-profile.html">
+      <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <input
             type="text"
