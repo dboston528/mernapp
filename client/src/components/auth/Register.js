@@ -50,7 +50,6 @@ const Register = ({ setAlert, register }) => {
             name="email"
             value={email}
             onChange={e => onchange(e)}
-            required
           />
           <small className="form-text">
             This site uses Gravatar so if you want a profile image, use a
