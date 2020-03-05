@@ -6,7 +6,9 @@ import {
 } from '../actions/types';
 
 const initialState = {
+  //looks for item in local storage
   token: localStorage.getItem('token'),
+  //When the response is successful isAuthenticated = true
   isAuthenticated: null,
   loading: true,
   user: null
@@ -25,15 +27,16 @@ export default function(state = initialState, action) {
         user: payload
       };
     case REGISTER_SUCCESS:
+      //setting the token
       localStorage.setItem('token', payload.token);
       return {
+        //returns whatever is in the state
         ...state,
         ...payload,
         isAuthenticated: true,
         loadig: false
       };
     case REGISTER_FAIL:
-    case AUTH_ERROR:
       localStorage.removeItem('token');
       return {
         ...state,
@@ -41,6 +44,7 @@ export default function(state = initialState, action) {
         isAuthenticated: false,
         loading: false
       };
+    case AUTH_ERROR:
     default:
       return state;
   }
