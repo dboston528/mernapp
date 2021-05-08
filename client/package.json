@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "eslint-utils": "^1.4.2",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.7",
     "moment": "^2.24.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
